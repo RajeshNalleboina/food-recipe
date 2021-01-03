@@ -25,7 +25,7 @@ function App() {
 
   const getData=async ()=>{
     let result= await Axios.get(URL)
-    console.log(result);
+    // console.log(result);
     setRecipes(result.data.hits)
     setQuery("")
   }
@@ -42,7 +42,7 @@ function App() {
     } else if(suggestion.includes(query.toLowerCase())){
         suggestion.splice(suggestion.indexOf(query.toLowerCase()),1)
         suggestion.unshift(query.toLowerCase())
-        console.log(suggestion)
+        // console.log(suggestion)
     } else if (suggestion.length>=5){
       suggestion.pop()
       suggestion.unshift(query.toLowerCase())
@@ -51,7 +51,7 @@ function App() {
 
     let getSuggestions=(e)=>{
       setSearchQuery(e.target.value)
-      console.log(searchQuery)
+      // console.log(searchQuery)
     }
 
   return (
